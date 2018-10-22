@@ -1,0 +1,29 @@
+Name	Lv	Exp	Health	Attack	Mana
+
+When the game starts you get 5 points to invest in increasing either: Health, Attack, Mana
+Each time you level up, you get 5 + your current level more points
+Start at level 1
+
+Physical attack - does set amount of damage (no cost)
+Magic attack - does random amout of damage, damage range dependent on level (costs mana)
+Heal - heal random amount, amount range dependent on level (costs mana)
+Run - move on to different enemy (lose some health)
+
+Enemies:
+Name	Lv Exp	Health	Attack
+Lv - Randomly generated level, up to slightly higher level than the player
+Exp - How much experience you gain for beating enemy, randomly generated up to it's own level
+Health - Randomly generated, correlated with level
+Attack - Randomly generated, correlated with level
+
+Enemy level algorithm:
+Random number generator from 1-5, if it gets a five you fight a "boss", otherwise just a regular enemy
+Regular enemy - Level is a random number from 1 to (5 + player's level)
+Boss - Level is a random number from player's level to (5 + player's level)
+
+Enemy Name and Sprite Algorithm:
+Random feeling word, random noun (villager, alien, pumpkin, etc.)
+Random sprite
+
+Experience required to level up will double each level
+1,2,4,8,16,etc
