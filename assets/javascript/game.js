@@ -1,5 +1,7 @@
 var hasName = false;
 var gameStarted = false;
+var upgradeTime = false;
+var nameTime = false;
 
 var upgradePoints = 5;
 var stats = {
@@ -22,15 +24,7 @@ document.onkeyup = function (e) {
 		if (keystroke === "Enter")
 			startGame();	
 	}
-	
-
-	/*if (keystroke != "Enter" && !hasName) {
-		stats.name = stats.name + e.key;
-		document.getElementById("keystroke").innerHTML = stats.name;
-	}
-	else {
-		hasName = true;
-		document.getElementById("name").innerHTML = stats.name;
-	}*/
+	else if (nameTime) 
+		makeName(keystroke);
 }
 

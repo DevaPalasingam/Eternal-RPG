@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eteranl RPG</title>
+	<title>Eternal RPG</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
@@ -18,32 +18,32 @@
 
 	<div class="upgrades" style="display:none">
 		<p>Upgrade points: </p>
-		<p id="upgradePoints"></p>
+		<p id="upgradePoints" class="upgradeDisplay"></p>
 	</div>
 
 	<div id="health" class="upgrades" style="display:none">
 		<p>Health: </p>
-		<p id="healthDisplay"></p>
+		<p id="healthDisplay" class="upgradeDisplay"></p>
 		<button id="healthMinus" onclick="subtractSkill(this)">-</button>
 		<button id="healthPlus" onclick="addSkill(this)">+</button>
 	</div>
 	
 	<div id="attack" class="upgrades" style="display:none">
 		<p>Attack: </p>
-		<p id="attackDisplay"></p>
+		<p id="attackDisplay" class="upgradeDisplay"></p>
 		<button id="attackMinus" onclick="subtractSkill(this)">-</button>
 		<button id="attackPlus" onclick="addSkill(this)">+</button>
 	</div>
 
 	<div id="mana" class="upgrades" style="display:none">
 		<p>Mana: </p>
-		<p id="manaDisplay"></p>
+		<p id="manaDisplay" class="upgradeDisplay"></p>
 		<button id="manaMinus" onclick="subtractSkill(this)">-</button>
 		<button id="manaPlus" onclick="addSkill(this)">+</button>
 	</div>
 
 	<div class="upgrades" style="display:none">
-		<button id="complete">Complete</button>
+		<button id="complete" onclick="displayUpgrades(false)">Complete</button>
 	</div>
 
 
