@@ -12,10 +12,44 @@
 </head>
 <body>
 	
+	<div id="messageScreen">Press Enter to Begin</div>
 	<div id="keystroke"></div>
 	<div id="name"></div>
 
+	<div class="upgrades" style="display:none">
+		<p>Upgrade points: </p>
+		<p id="upgradePoints"></p>
+	</div>
+
+	<div id="health" class="upgrades" style="display:none">
+		<p>Health: </p>
+		<p id="healthDisplay"></p>
+		<button id="healthMinus" onclick="subtractSkill(this)">-</button>
+		<button id="healthPlus" onclick="addSkill(this)">+</button>
+	</div>
+	
+	<div id="attack" class="upgrades" style="display:none">
+		<p>Attack: </p>
+		<p id="attackDisplay"></p>
+		<button id="attackMinus" onclick="subtractSkill(this)">-</button>
+		<button id="attackPlus" onclick="addSkill(this)">+</button>
+	</div>
+
+	<div id="mana" class="upgrades" style="display:none">
+		<p>Mana: </p>
+		<p id="manaDisplay"></p>
+		<button id="manaMinus" onclick="subtractSkill(this)">-</button>
+		<button id="manaPlus" onclick="addSkill(this)">+</button>
+	</div>
+
+	<div class="upgrades" style="display:none">
+		<button id="complete">Complete</button>
+	</div>
+
+
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<script type="text/javascript" src="assets/javascript/startScreen.js"></script>
+	<script type="text/javascript" src="assets/javascript/upgrade.js"></script>
 
 </body>
 </html>
