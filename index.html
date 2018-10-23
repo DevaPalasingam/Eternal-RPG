@@ -17,6 +17,11 @@
 	<div id="name"></div>
 
 	<div class="upgrades" style="display:none">
+		<p>Level: </p>
+		<p id="level" class="upgradeDisplay"></p>
+	</div>
+
+	<div class="upgrades" style="display:none">
 		<p>Upgrade points: </p>
 		<p id="upgradePoints" class="upgradeDisplay"></p>
 	</div>
@@ -24,32 +29,33 @@
 	<div id="health" class="upgrades" style="display:none">
 		<p>Health: </p>
 		<p id="healthDisplay" class="upgradeDisplay"></p>
-		<button id="healthMinus" onclick="subtractSkill(this)">-</button>
-		<button id="healthPlus" onclick="addSkill(this)">+</button>
+		<button id="healthMinus" onclick="subtractSkill('healthDisplay', 'health')">-</button>
+		<button id="healthPlus" onclick="addSkill('healthDisplay', 'health')">+</button>
 	</div>
 	
 	<div id="attack" class="upgrades" style="display:none">
 		<p>Attack: </p>
 		<p id="attackDisplay" class="upgradeDisplay"></p>
-		<button id="attackMinus" onclick="subtractSkill(this)">-</button>
-		<button id="attackPlus" onclick="addSkill(this)">+</button>
+		<button id="attackMinus" onclick="subtractSkill('attackDisplay', 'attack')">-</button>
+		<button id="attackPlus" onclick="addSkill('attackDisplay', 'attack')">+</button>
 	</div>
 
 	<div id="mana" class="upgrades" style="display:none">
 		<p>Mana: </p>
 		<p id="manaDisplay" class="upgradeDisplay"></p>
-		<button id="manaMinus" onclick="subtractSkill(this)">-</button>
-		<button id="manaPlus" onclick="addSkill(this)">+</button>
+		<button id="manaMinus" onclick="subtractSkill('manaDisplay', 'mana')">-</button>
+		<button id="manaPlus" onclick="addSkill('manaDisplay', 'mana')">+</button>
 	</div>
 
 	<div class="upgrades" style="display:none">
-		<button id="complete" onclick="displayUpgrades(false)">Complete</button>
+		<button id="complete" onclick="battle()">Let's Go!!!</button>
 	</div>
 
 
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 	<script type="text/javascript" src="assets/javascript/startScreen.js"></script>
 	<script type="text/javascript" src="assets/javascript/upgrade.js"></script>
+	<script type="text/javascript" src="assets/javascript/battle.js"></script>
 
 </body>
 </html>
