@@ -16,39 +16,87 @@
 	<div id="keystroke"></div>
 	<div id="name"></div>
 
+<!-- ==============Upgrades========================================= -->
 	<div class="upgrades" style="display:none">
 		<p>Level: </p>
 		<p id="level" class="upgradeDisplay"></p>
 	</div>
-
 	<div class="upgrades" style="display:none">
 		<p>Upgrade points: </p>
 		<p id="upgradePoints" class="upgradeDisplay"></p>
 	</div>
-
 	<div id="health" class="upgrades" style="display:none">
 		<p>Health: </p>
 		<p id="healthDisplay" class="upgradeDisplay"></p>
 		<button id="healthMinus" onclick="subtractSkill('healthDisplay', 'health')">-</button>
 		<button id="healthPlus" onclick="addSkill('healthDisplay', 'health')">+</button>
-	</div>
-	
+	</div>	
 	<div id="attack" class="upgrades" style="display:none">
 		<p>Attack: </p>
-		<p id="attackDisplay" class="upgradeDisplay"></p>
+		<p id="attackDisplay" class="upgradeDisplay "></p>
 		<button id="attackMinus" onclick="subtractSkill('attackDisplay', 'attack')">-</button>
 		<button id="attackPlus" onclick="addSkill('attackDisplay', 'attack')">+</button>
 	</div>
-
 	<div id="mana" class="upgrades" style="display:none">
 		<p>Mana: </p>
 		<p id="manaDisplay" class="upgradeDisplay"></p>
 		<button id="manaMinus" onclick="subtractSkill('manaDisplay', 'mana')">-</button>
 		<button id="manaPlus" onclick="addSkill('manaDisplay', 'mana')">+</button>
 	</div>
-
 	<div class="upgrades" style="display:none">
 		<button id="complete" onclick="battle()">Let's Go!!!</button>
+	</div>
+
+	
+	<!--================Battle=======================================  -->
+	<div class="battle" style="display:none">
+		<p>Lv: </p>
+		<p id="battleLv"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Health: </p>
+		<p id="battleHealth"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Attack: </p>
+		<p id="battleAttack"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Mana: </p>
+		<p id="battleMana"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Exp: </p>
+		<p id="battleExp"></p>
+	</div>
+
+	<div class="battle" style="display:none">
+		<button id="strike">Strike</button>
+	</div>
+	<div class="battle" style="display:none">
+		<button id="fireball">Fireball</button>
+	</div>
+	<div class="battle" style="display:none">
+		<button id="heal">Heal</button>
+	</div>
+	<div class="battle" style="display:none">
+		<button id="run" onclick="run()">Run</button>
+	</div>
+
+	<div class="battle" style="display:none">
+		<p id="monster"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Lv: </p>
+		<p id="monsterLv"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Health: </p>
+		<p id="monsterHealth"></p>
+	</div>
+	<div class="battle" style="display:none">
+		<p>Attack: </p>
+		<p id="monsterAttack"></p>
 	</div>
 
 
