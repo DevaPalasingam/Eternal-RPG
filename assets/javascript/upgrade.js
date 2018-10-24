@@ -1,6 +1,4 @@
 function displayUpgrades(makeAppear) {
-	upgradeTime = true;
-
 	var upgrades = document.querySelectorAll(".upgrades");
 	var i = upgrades.length;
 
@@ -16,11 +14,9 @@ function displayUpgrades(makeAppear) {
 			upgrades[i].setAttribute("style", "display:block"); 
 	}
 		
-	else {
+	else
 		while (i--)
 			upgrades[i].setAttribute("style", "display:none");
-		upgradeTime = false;
-	}
 }
 
 function addSkill(elem, attribute) {

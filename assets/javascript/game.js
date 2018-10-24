@@ -1,6 +1,5 @@
 var hasName = false;
 var gameStarted = false;
-var upgradeTime = false;
 var nameTime = false;
 
 var upgradePoints = 5;
