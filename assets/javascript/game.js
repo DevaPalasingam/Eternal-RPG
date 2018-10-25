@@ -27,3 +27,24 @@ document.onkeyup = function (e) {
 		makeName(keystroke);
 }
 
+function gameOver() {
+	var game = document.querySelectorAll(".game");
+	var g = game.length;
+
+	var upgrades = document.querySelectorAll(".upgrades");
+	var u = upgrades.length;
+
+	var battle = document.querySelectorAll(".battle");
+	var b = battle.length;
+
+	while(g--)
+		game[g].setAttribute("style", "display:none");
+	while(u--)
+		upgrades[u].setAttribute("style", "display:none");
+	while(b--)
+		battle[b].setAttribute("style", "display:none");
+
+	document.getElementById("messageScreen").innerHTML = "You Died";
+	document.getElementById("messageScreen").setAttribute("style", "display:block");
+}
+

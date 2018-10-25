@@ -33,7 +33,7 @@ function generateEnemy() {
 	else
 		level = Math.floor(Math.random() * stats.level) + 1;
 
-	var health = Math.floor(Math.random() * level) + 1;
+	var health = Math.floor(Math.random() * level) + 1 + Math.floor(stats.attack / 2) + Math.floor(stats.mana / 2);
 	var attack = Math.floor(Math.random() * level) + 1;
 	var exp = Math.floor(Math.random() * level) + 1;
 
@@ -71,7 +71,15 @@ function strike() {
 }
 
 function run() {
-	generateEnemy();
+	var x = (stats.level < 5) ? 1 : 5
+	if (x < stats.health) {
+		checkPlayer(x);
+		document.getElementById("messageScreen").innerHTML = "Run and take " + x + " damage";
+		generateEnemy();
+	}
+	else {
+		gameOver();
+	}
 }
 
 function checkEnemy(damage) {
@@ -93,14 +101,20 @@ function checkEnemy(damage) {
 }
 
 function checkPlayer(damage) {
-
+	if (damage >= stats.health) {
+		gameOver();
+	}
+	else {
+		stats.health = stats.health - damage;
+		document.getElementById("battleHealth").innerHTML = stats.health;
+	}
 }
 
 function levelUp() {
 	var battle = document.querySelectorAll(".battle");
 	var i = battle.length;
 
-	upgradePoints = upgradePoints + stats.level + 5;
+	upgradePoints = upgradePoints + Math.floor(Math.random() * stats.level) + 1;
 	stats.level ++;
 	stats.exp = stats.exp - stats.nextLv;
 	stats.nextLv = stats.nextLv * 2
