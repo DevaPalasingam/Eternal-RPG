@@ -97,5 +97,16 @@ function checkPlayer(damage) {
 }
 
 function levelUp() {
+	var battle = document.querySelectorAll(".battle");
+	var i = battle.length;
 
+	upgradePoints = upgradePoints + stats.level + 5;
+	stats.level ++;
+	stats.exp = stats.exp - stats.nextLv;
+	stats.nextLv = stats.nextLv * 2
+
+	while (i--)
+		battle[i].setAttribute("style", "display:none");
+
+	displayUpgrades(true);
 }
