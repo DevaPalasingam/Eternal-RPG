@@ -33,7 +33,7 @@ function generateEnemy() {
 	else
 		level = Math.floor(Math.random() * stats.level) + 1;
 
-	var health = Math.floor(Math.random() * level) + 1 + Math.floor(stats.attack / 2) + Math.floor(stats.mana / 2);
+	var health = Math.floor(Math.random() * level) + 1 + stats.attack + stats.mana;
 	var attack = Math.floor(Math.random() * level) + 1;
 	var exp = Math.floor(Math.random() * level) + 1;
 
@@ -68,6 +68,10 @@ function displayBattle() {
 function strike() {
 	document.getElementById("messageScreen").innerHTML = "Attack for " + stats.attack.toString() + " damage";
 	checkEnemy(stats.attack);
+}
+
+function heal() {
+	
 }
 
 function run() {
