@@ -33,7 +33,7 @@ function generateEnemy() {
 	else
 		level = Math.floor(Math.random() * stats.level) + 1;
 
-	var health = Math.floor(Math.random() * level) + 1 + stats.attack + stats.mana;
+	var health = Math.floor(Math.random() * level) + 1 + stats.attack + stats.maxMana;
 	var attack = Math.floor(Math.random() * level) + 1;
 	var exp = Math.floor(Math.random() * level) + 1;
 
@@ -70,8 +70,39 @@ function strike() {
 	checkEnemy(stats.attack);
 }
 
+function fireball() {
+	var manaCost = Math.floor(stats.maxMana / 10) + 1;
+	console.log(manaCost);
+	var damage = stats.maxMana * 3;
+	if (stats.mana >= manaCost) {
+		stats.mana = stats.mana - manaCost;
+		document.getElementById("battleMana").innerHTML = stats.mana;
+		checkEnemy(damage);
+	}
+	else
+		document.getElementById("messageScreen").innerHTML = "Not enough Mana";
+}
+
 function heal() {
-	
+	var manaCost = Math.floor(stats.maxMana / 5) + 1;
+	var healthIncrease = Math.floor(stats.maxHealth / 3) + 1;
+	if (stats.mana >= manaCost) {
+		stats.mana = stats.mana - manaCost;
+		if (healthIncrease > (stats.maxHealth - stats.health)) {
+			document.getElementById("messageScreen").innerHTML = "Heal " + (stats.maxHealth - stats.health) + " HP";
+			stats.health = stats.maxHealth;
+		}
+		else {
+			stats.health = stats.health + healthIncrease;
+			document.getElementById("messageScreen").innerHTML = "Heal " + healthIncrease + " HP";
+			console.log("healing");
+		}
+		document.getElementById("battleHealth").innerHTML = stats.health;
+		document.getElementById("battleMana").innerHTML = stats.mana;
+		checkEnemy(0);
+	}
+	else
+		document.getElementById("messageScreen").innerHTML = "Not enough Mana";
 }
 
 function run() {
